@@ -1,3 +1,12 @@
-<h1 class="text-3xl font-bold underline">
-  Hello world!
-</h1>
+<header id="header" class="p-10 bg-white flex justify-between items-center sticky top-0">
+    <a routerLink="/" class="header-title font-medium text-4xl">
+      Alexandros Pappas
+    </a>
+
+    <nav class="flex gap-4">
+      <a routerLink="/" class="font-light">Home</a>
+      <a routerLink="/About" class="font-light">About</a>
+      <a id="contact-btn" routerLink="/Contact" class="font-light bg-black text-slate-50 pt-2 pb-2 pr-4 pl-4">Contact</a>
+    </nav>
+</header>
+<router-outlet></router-outlet>
