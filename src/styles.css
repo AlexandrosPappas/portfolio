@@ -56,3 +56,7 @@
 .font-thin{
     font-family: var(--text-thin);
 }
+.font-header-title{
+    font-family: 'Dancing Script', cursive;
+/* font-family: 'Mulish', sans-serif; */
+}
