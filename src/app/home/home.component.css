@@ -1,0 +1,14 @@
+.tech-img{
+    display: flex;
+    gap: 2rem;
+    overflow-x: auto;
+}
+.tech-img img{
+    width: 75px;
+}
+@media(width > 768px){
+    .tech-img{
+        justify-content: center;
+        /* padding: 0; */
+    }
+}

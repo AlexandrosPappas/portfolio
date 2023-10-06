@@ -1,0 +1,22 @@
+.about-grid{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+.about-photo img{
+    border-radius: 1.5rem;
+}
+.tech-stack-item{
+    padding-left: 1rem;
+    font-family: var(--text-regular);
+}
+.black-line{
+    content: '';
+    background-color: black;
+    height: 1px;;
+}
+@media(width > 768px){
+    .about-grid{
+        grid-template-columns: 25% 25% 50%;
+    }
+}
