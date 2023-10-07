@@ -1,0 +1,27 @@
+.row{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+.full-name{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+label{
+    font-family: var(--text-light);
+}
+span{
+    font-family: var(--text-thin);
+}
+input, textarea{
+    padding: 2px 5px;
+    border: 1px solid #a9a9a9;
+    border-radius: 0; 
+    box-shadow: 0 0 0 1px transparent;
+    transition: .1s opacity linear;
+    background-color: #fafafa;
+}
+.external-link{
+    text-decoration: underline;
+}

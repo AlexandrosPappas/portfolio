@@ -1,1 +1,38 @@
-<p>contact works!</p>
+<div class="contact-page p-10 grid grid-cols-1 md:grid-cols-2">
+    <div class="contact-info">
+        <h1 class="text-3xl font-semibold">Feel free to contact me</h1>
+        <p class="pt-10 text-xl font-light">If you would like to know don't hesitate to reach out.</p>
+        <h3 class="pt-10 text-2xl font-semibold">Email</h3>
+        <p class="text-xl font-light">pappas.g.alexandros@gmail.com</p>
+        <h3 class="pt-10 text-2xl font-semibold"></h3>
+        <p class="text-xl font-light">You can also find my Linkedin profile <a class="external-link text-blue-400" href="https://www.linkedin.com/in/alexandros-pappas-se/" target="_blank">here</a> <br> and my Github account <a class="external-link text-blue-400" href="https://github.com/AlexandrosPappas" target="_blank">here</a>.</p>
+    </div>
+    <div class="form-container flex flex-col justify-center items-center">
+        <form class="flex flex-col justify-center gap-4 text-xl" [formGroup]="contactForm">
+            <div class="full-name">
+                <div class="firstname w-full">
+                    <label for="firstName">First Name</label>
+                    <input type="text" name="firstName" id="firstName" class="w-full" formControlName="firstName">
+                    <span *ngIf="!contactForm.get('firstName')?.valid && contactForm.get('firstName')?.touched" class="text-red-500">First Name is required.</span>
+                </div>
+                <div class="lastname w-full">
+                    <label for="lastName">Last Name</label>
+                    <input type="text" name="lastName" id="lastName" class="w-full" formControlName="lastName">
+                    <span *ngIf="!contactForm.get('lastName')?.valid && contactForm.get('lastName')?.touched" class="text-red-500">Last Name is required.</span>
+                </div>
+            </div>
+            <div class="row">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" formControlName="email">
+                <span *ngIf="!contactForm.get('email')?.valid && contactForm.get('email')?.touched" class="text-red-500">Please check your email.</span>
+            </div>
+            <div class="row">
+                <label for="message">Message</label>
+                <textarea name="message" id="message" cols="30" rows="10" formControlName="message"></textarea>
+                <span *ngIf="!contactForm.get('message')?.valid && contactForm.get('message')?.touched" class="text-red-500">Message is required.</span>
+            </div>
+            <button type="button" class="font-light w-fit bg-black text-slate-50 pt-4 pb-4 pr-8 pl-8" (click)="onSubmit()">Submit</button>
+        </form>
+    </div>
+</div>
+
