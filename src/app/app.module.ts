@@ -8,10 +8,22 @@ import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FooterComponent } from './footer/footer.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, AboutComponent, ContactComponent, FooterComponent],
-  imports: [BrowserModule, AppRoutingModule, ReactiveFormsModule],
+  declarations: [
+    AppComponent,
+    HomeComponent,
+    AboutComponent,
+    ContactComponent,
+    FooterComponent,
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

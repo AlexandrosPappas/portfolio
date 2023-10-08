@@ -42,3 +42,38 @@ nav a.active::after{
     transform: scale(1);
     transform-origin: left;
 }
+#mobile-nav{
+    display: none;
+}
+.burger{
+    cursor: pointer;
+}
+.bx{
+    font-size: 2.5rem;
+}
+#mobile-links{
+    display: none;
+}
+@media(width < 768px){
+    #mobile-nav{
+        display: flex;
+    }
+    #header{
+        display: none;
+    }
+    #mobile-links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        width: 70%;
+        background-color: #fff;
+        transform: translateX(100%);
+        visibility: hidden;
+        z-index: 999;
+        padding-top: 115px;
+      }
+}
