@@ -4,7 +4,9 @@
     overflow-x: auto;
 }
 .tech-img img{
-    width: 75px;
+    width: 100px;
+    aspect-ratio: 3/2;
+    object-fit: contain;
 }
 @media(width > 768px){
     .tech-img{

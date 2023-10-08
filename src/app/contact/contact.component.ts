@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-// import emailjs, { EmailJSResponseStatus } from '@emailjs/browser';
+import emailjs, { EmailJSResponseStatus } from '@emailjs/browser';
 
 @Component({
   selector: 'app-contact',
@@ -20,15 +20,22 @@ export class ContactComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  onSubmit() {
-    console.log(this.contactForm);
+  async onSubmit() {
+    //first we check if the form is valid
+    if (this.contactForm.valid) {
+      //we initialize the public key
+      emailjs.init('aGTUb8yTNPZCsMIEx');
 
-    // emailjs.sendForm('service_vh8oskl', 'YOUR_TEMPLATE_ID', e.target as HTMLFormElement, 'YOUR_PUBLIC_KEY')
-    //   .then((result: EmailJSResponseStatus) => {
-    //     console.log(result.text);
-    //   }, (error) => {
-    //     console.log(error.text);
-    //   });
-    //}
+      //we send the mail with the forms data
+      let response = await emailjs.send('service_vh8oskl', 'template_2sc334h', {
+        from_name: this.contactForm.value.firstName,
+        message: this.contactForm.value.message,
+        from_email: this.contactForm.value.email,
+        from_lastname: this.contactForm.value.lastName,
+      });
+
+      alert('Thank you for contact me!');
+      this.contactForm.reset();
+    }
   }
 }
