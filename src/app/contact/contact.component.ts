@@ -24,17 +24,16 @@ export class ContactComponent implements OnInit {
     //first we check if the form is valid
     if (this.contactForm.valid) {
       //we initialize the public key
-      emailjs.init('aGTUb8yTNPZCsMIEx');
+      emailjs.init('pSS_m_jaNyiUmPWEH');
 
       //we send the mail with the forms data
-      let response = await emailjs.send('service_vh8oskl', 'template_2sc334h', {
+      let response = await emailjs.send('service_orfs3f2', 'template_ohszm4u', {
         from_name: this.contactForm.value.firstName,
         message: this.contactForm.value.message,
         from_email: this.contactForm.value.email,
         from_lastname: this.contactForm.value.lastName,
       });
 
-      alert('Thank you for contact me!');
       this.contactForm.reset();
     }
   }
