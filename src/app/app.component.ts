@@ -33,8 +33,8 @@ import {
   ],
 })
 export class AppComponent {
-  title = 'personal-portfolio';
-  isMenuOpen: boolean = true;
+  title = 'Alexandros Pappas';
+  isMenuOpen: boolean = false;
 
   toggleMenu() {
     this.isMenuOpen = !this.isMenuOpen;

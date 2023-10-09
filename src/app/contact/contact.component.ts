@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Title } from '@angular/platform-browser';
 import emailjs, { EmailJSResponseStatus } from '@emailjs/browser';
 
 @Component({
@@ -9,13 +10,14 @@ import emailjs, { EmailJSResponseStatus } from '@emailjs/browser';
 })
 export class ContactComponent implements OnInit {
   contactForm: FormGroup;
-  constructor() {
+  constructor(titleService: Title) {
     this.contactForm = new FormGroup({
       firstName: new FormControl(null, Validators.required),
       lastName: new FormControl(null, Validators.required),
       email: new FormControl(null, [Validators.required, Validators.email]),
       message: new FormControl(null, Validators.required),
     });
+    titleService.setTitle('Contact');
   }
 
   ngOnInit(): void {}
