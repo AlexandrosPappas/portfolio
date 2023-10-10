@@ -6,6 +6,12 @@
     margin-top: -0.5rem;
     color: white;
 }
+#main-row{
+    min-height: calc(100vh - 155px - 64px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 nav{
     display: flex;
     gap: 1.5rem;
