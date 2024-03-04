@@ -9,6 +9,7 @@ import { ContactComponent } from './contact/contact.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FooterComponent } from './footer/footer.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ProjectsComponent } from './projects/projects.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AboutComponent,
     ContactComponent,
     FooterComponent,
+    ProjectsComponent,
   ],
   imports: [
     BrowserModule,
