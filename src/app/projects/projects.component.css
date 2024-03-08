@@ -1,0 +1,25 @@
+.projects-cards{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    place-items: center;
+    align-content: center;
+    gap: 1rem;
+}
+.projects-cards img{
+    border-radius: 15px;
+}
+.projects-card{
+    transform: translateY(0px);
+    transition: 1s ease-in-out;
+}
+.projects-card:hover{
+    transform: translateY(-15px);
+}
+h1{
+    font-size: 1.3rem;;
+}
+@media(width < 768px){
+    .projects-cards{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
